@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hinga Marketplace</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f7f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e7d32;
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding: 1rem;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product-info {
+      margin-top: 1rem;
+    }
+
+    .product-info h3 {
+      font-size: 1.1rem;
+    }
+
+    .price {
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    .stars {
+      color: gold;
+    }
+
+    .footer {
+      background: #012803;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    
+    header {
+      background-color: rgba(6, 33, 6, 0.9); 
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #ffe600;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background-color:seagreen;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 100;
+      width: 250px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 5px 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #2eaa2e;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .see{
+      text-align: center;
+      display: flex;
+    margin-right: 45px;
+    padding-right: 50px;
+    gap: 30px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="./hinga logo.png.png" alt="Hinga Logo" style="border-radius: 20px" />
+      <span style="color: #ffe600;">HINGA☘</span>
+    </div>
+    <nav>
+      <div class="see">
+      <a href="./index.html">Home</a>
+      <div class="dropdown">
+        <a href="#">About Us</a>
+        <div class="dropdown-content">
+          <hr><a href="./mission.html">Our Mission</a>
+          <hr><a href="./vision.html">Our Vision</a>
+          <hr><a href="./team.html">Team</a><hr>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Service</a>
+        <div class="dropdown-content">
+          <hr><a href="./real.html">Real-time Weather</a>
+          <hr><a href="./sell.html">Buy&Sell</a>
+          <hr><a href="./train.html">Training</a>
+         <hr> <a href="./tools.html">Tools</a>
+          <hr><a href="./guide.html">Guideline</a><hr>
+        </div>
+      </div>
+      <a href="./coca.html">Contact</a>
+    </div>
+      <a href="./login.html"><i class="fas fa-user"></i> Log In</a>
+    </nav>
+  </header>
+
+
+
+<main>
+  <h2 style="margin-bottom: 1rem;">Modern Farming Tools & Equipment</h2>
+  <div class="product-grid" id="productList">
+  </div>
+</main>
+
+<footer class="footer">
+  &copy; 2025 HINGA. All rights reserved.
+</footer>
+
+<script>
+  const products = [
+    {
+      name: "Solar Water Pump",
+      price: "$350",
+      quality: "High",
+      stars: 5,
+      img: "./water pp.jpeg"
+    },
+    {
+      name: "Smart Drip Irrigation Kit",
+      price: "$220",
+      quality: "Premium",
+      stars: 4,
+      img: "./auto drip.jpeg"
+    },
+    {
+      name: "Motorized Plough",
+      price: "$600",
+      quality: "Excellent",
+      stars: 5,
+      img: "motorized.jpeg"
+    },
+    {
+      name: "Soil Sensor Device",
+      description:" smart tool to detect soil fertility",
+      price: "$75",
+      quality: "Good",
+      stars: 4,
+      img: "./sensor.jpeg"
+    }
+  ];
+
+  function renderStars(count) {
+    return "★".repeat(count) + "☆".repeat(5 - count);
+  }
+
+  const productList = document.getElementById("productList");
+
+  products.forEach(product => {
+    productList.innerHTML += `
+      <div class="product-card">
+        <img src="${product.img}" alt="${product.name}">
+        <div class="product-info">
+          <h3>${product.name}</h3>
+          <p class="price">${product.price}</p>
+          <p>Quality: ${product.quality}</p>
+          <p class="stars">${renderStars(product.stars)}</p>
+        </div>
+      </div>
+    `;
+  });
+</script>
+
+</body>
+</html>

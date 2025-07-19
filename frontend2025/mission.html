@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Mission | Hinga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5fff7;
+    }
+
+    header {
+      background-color: #228B22;
+      padding: 15px 30px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .back-home {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      background-color: #034d1a;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .back-home:hover {
+      background-color: #04662e;
+    }
+
+    section {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .mission-text {
+      max-width: 900px;
+      margin: auto;
+      font-size: 1.2rem;
+      color: #034d1a;
+    }
+
+    .charts-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .chart-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 400px;
+      max-width: 90%;
+    }
+
+    footer {
+      background-color: #013a1a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .mission-text {
+        font-size: 1rem;
+        padding: 0 15px;
+      }
+
+      .chart-box {
+        width: 100%;
+      }
+    }
+    
+    header {
+      background-color: rgba(6, 33,6,0.9); 
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #ffe600;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background-color: seagreen;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 100;
+      width: 250px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 5px 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #2eaa2e;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .see{
+      text-align: center;
+      display: flex;
+    margin-right: 45px;
+    padding-right: 50px;
+    gap: 30px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="./hinga logo.png.png" alt="Hinga Logo" style="border-radius: 20px" />
+      <span style="color: #ffe600;">HINGA☘</span>
+    </div>
+    <nav>
+      <div class="see">
+      <a href="./index.html">Home</a>
+      <div class="dropdown">
+        <a href="#"> About Us</a>
+        <div class="dropdown-content">
+       <hr>   <a href="./mission.html">Our Mission</a>
+         <hr> <a href="./vision.html">Our Vision</a>
+          <hr><a href="./team.html">Team</a><hr>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Service</a>
+        <div class="dropdown-content">
+          <hr><a href="./real.html">Real-time Weather</a>
+          <hr><a href="./sell.html">Buy&Sell</a>
+          <hr><a href="./train.html">Training</a>
+          <hr><a href="./tools.html">Tools</a>
+        <hr><a href="./guide.html">Guideline</a><hr>
+        </div>
+      </div>
+      <a href="./coca.html">Contact</a>
+    </div>
+      <a href="./login.html"><i class="fas fa-user"></i> Log In</a>
+    </nav>
+  </header>
+
+
+<section>
+
+  <div class="mission-text">
+    <h1 style="color:orange">Our Mission</h1>
+    <p>
+      At Hinga, our mission is to empower farmers with modern tools, sustainable methods, and reliable information.
+      We aim to increase agricultural productivity while caring for the environment.
+      Through training, innovation, and technology, we help rural communities thrive.
+      Our commitment is rooted in transforming agriculture into a smart, data-driven, and prosperous sector.
+      Together, we grow a greener and more secure future.
+    </p>
+  </div>
+
+  <div class="charts-container">
+    <div class="chart-box">
+      <h3>Crop Productivity Growth (2021–2025)</h3>
+      <canvas id="productivityChart"></canvas>
+    </div>
+
+    <div class="chart-box">
+      <h3>Farmer Training Impact</h3>
+      <canvas id="trainingChart"></canvas>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Hinga Agritech | Empowering Farmers Everywhere</p>
+</footer>
+
+<script>
+  const ctx1 = document.getElementById('productivityChart').getContext('2d');
+  new Chart(ctx1, {
+    type: 'line',
+    data: {
+      labels: ['2021', '2022', '2023', '2024', '2025'],
+      datasets: [{
+        label: 'Productivity (tons/ha)',
+        data: [1.8, 2.2, 2.6, 3.0, 3.4],
+        borderColor: 'green',
+        fill: false,
+        tension: 0.4
+      }]
+    },
+    options: {
+      responsive: true
+    }
+  });
+
+  const ctx2 = document.getElementById('trainingChart').getContext('2d');
+  new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: ['Before Training', 'After Training'],
+      datasets: [{
+        label: 'Average Yield (tons)',
+        data: [1.5, 2.8],
+        backgroundColor: ['#ffb703', '#219ebc']
+      }]
+    },
+    options: {
+      responsive: true
+    }
+  });
+</script>
+
+</body>
+</html>

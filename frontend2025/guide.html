@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hinga - Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f7f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .service {
+      background: white;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .icon {
+      font-size: 30px;
+      color: #4CAF50;
+      flex-shrink: 0;
+    }
+
+    .service h2 {
+      cursor: pointer;
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .service-content {
+      display: none;
+      margin-top: 10px;
+      color: #555;
+      font-size: 15px;
+    }
+
+    .active .service-content {
+      display: block;
+    }
+
+    .service-body {
+      flex-grow: 1;
+    }
+
+    footer {
+      background-color: #033004;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: 40px;
+    }
+    
+    header {
+      background-color: rgba(6, 33,6, 0.9); 
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #ffe600;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background-color: seagreen;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 100;
+      width: 250px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 5px 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #2eaa2e;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .see{
+      text-align: center;
+      display: flex;
+    margin-right: 45px;
+    padding-right: 50px;
+    gap: 30px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="./hinga logo.png.png" alt="Hinga Logo" style="border-radius: 20px" />
+      <span style="color: #ffe600;">HINGA☘</span>
+    </div>
+    <nav>
+      <div class="see">
+      <a href="./index.html">Home</a>
+      <div class="dropdown">
+        <a href="#">About Us</a>
+        <div class="dropdown-content">
+          <hr><a href="./mission.html">Our Mission</a>
+          <hr><a href="./vision.html">Our Vision</a>
+         <hr><a href="./team.html">Team</a><hr>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#"> Service</a>
+        <div class="dropdown-content">
+          <hr><a href="./real.html">Real-time Weather</a>
+          <hr><a href="./sell.html">Buy&Sell</a>
+          <hr><a href="./train.html">Training</a>
+          <hr><a href="./tools.html">Tools</a>
+          <hr><a href="./guide.html">Guideline</a><hr>
+        </div>
+      </div>
+      <a href="./coca.html">Contact</a>
+    </div>
+      <a href="./login.html"><i class="fas fa-user"></i> Log In</a>
+    </nav>
+  </header>
+ 
+
+  <div class="container">
+
+    <div class="service">
+      <div class="icon"><i class="fas fa-leaf"></i></div>
+      <div class="service-body">
+        <h2 onclick="toggleService(this)">Crop & Livestock Info Hub</h2>
+        <div class="service-content">
+          <p>Access best practices, seasonal calendars, pest alerts, and training in local languages for both crops and animals.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon"><i class="fas fa-robot"></i></div>
+      <div class="service-body">
+        <h2 onclick="toggleService(this)">Smart Advisory System</h2>
+        <div class="service-content">
+          <p>Get AI-powered or expert advice, fertilizer suggestions, irrigation tips, and more — even via SMS or WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon"><i class="fas fa-store"></i></div>
+      <div class="service-body">
+        <h2 onclick="toggleService(this)">Marketplace & Logistics</h2>
+        <div class="service-content">
+          <p>Sell your produce directly to buyers, track pricing, and access delivery services to reduce middleman losses.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon"><i class="fas fa-cloud-sun"></i></div>
+      <div class="service-body">
+        <h2 onclick="toggleService(this)">Weather & Climate Info</h2>
+        <div class="service-content">
+          <p>Receive localized forecasts, flood/drought alerts, and climate-smart farming tips.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon"><i class="fas fa-coins"></i></div>
+      <div class="service-body">
+        <h2 onclick="toggleService(this)">Agri-Fintech Solutions</h2>
+        <div class="service-content">
+          <p>Learn about microloans, insurance, budgeting tools, and mobile banking options tailored for farmers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon"><i class="fas fa-chart-line"></i></div>
+      <div class="service-body">
+        <h2 onclick="toggleService(this)">Farm Management Tools</h2>
+        <div class="service-content">
+          <p>Track your farm records, expenses, inventory, and crop cycles — all in one place.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon"><i class="fas fa-vial"></i></div>
+      <div class="service-body">
+        <h2 onclick="toggleService(this)">Soil Testing & Inputs Guide</h2>
+        <div class="service-content">
+          <p>Find nearby labs, learn how to test your soil, and get customized advice on seeds, fertilizers, and organic inputs.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon"><i class="fas fa-users"></i></div>
+      <div class="service-body">
+        <h2 onclick="toggleService(this)">Community & Learning</h2>
+        <div class="service-content">
+          <p>Join forums, access training videos, hear farmer success stories, and share your experience with others.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Hinga Agritech | Empowering Farmers, One Click at a Time</p>
+  </footer>
+
+  <script>
+    function toggleService(element) {
+      const parent = element.closest('.service');
+      parent.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

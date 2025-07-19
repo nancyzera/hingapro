@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hinga | Buy Products</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f8f5;
+    }
+
+    nav {
+      /* background-color: #228B22; */
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .buy-container {
+      padding: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .buy-container h2 {
+      margin-bottom: 20px;
+      color: #228B22;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    .product p {
+      margin: 5px 0;
+    }
+
+    .stars {
+      color: #f4c430;
+    }
+
+    .product button {
+      background-color: #228B22;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .product button:hover {
+      background-color: #1e7a1e;
+    }
+
+    footer {
+      background-color: #022802;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 50px;
+    }
+    
+    header {
+      background-color: rgba(6,33,6,0.9); 
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #ffe600;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background-color: seagreen;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 100;
+      width: 250px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 5px 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #2eaa2e;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .see{
+      text-align: center;
+      display: flex;
+    margin-right: 45px;
+    padding-right: 50px;
+    gap: 30px;
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="logo">
+      <img src="./hinga logo.png.png" alt="Hinga Logo" style="border-radius: 20px" />
+      <span style="color: #ffe600;">HINGA☘</span>
+    </div>
+    <nav>
+      <div class="see">
+      <a href="./index.html"> Home</a>
+      <div class="dropdown">
+        <a href="#">About Us</a>
+        <div class="dropdown-content">
+         <hr><a href="./mission.html">Our Mission</a>
+          <hr><a href="./vision.html">Our Vision</a>
+          <hr><a href="./team.html">Team</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Service</a>
+        <div class="dropdown-content">
+        <hr><a href="./real.html">Real-time Weather</a>
+         <hr><a href="./sell.html">Buy&Sell</a>
+          <hr><a href="./train.html">Training</a>
+          <hr><a href="./tools.html">Tools</a>
+         <hr><a href="./guide.html">Guideline</a><hr>
+        </div>
+      </div>
+      <a href="./sell.html">Sell</a>
+      <a href="./coca.html">Contact</a>
+    </div>
+      <a href="./login.html"><i class="fas fa-user"></i> Log In</a>
+    </nav>
+  </header>
+    
+  
+
+  
+  <section class="buy-container">
+    <h2>Buy Farming Products</h2>
+    <div class="product-grid" id="productGrid">
+      <!-- Products will be inserted here by JS -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Hinga - Empowering Farmers Across Rwanda 
+  </footer>
+
+  <script>
+    const sampleProducts = [
+      {
+        name: "Organic Tomatoes",
+        amount: "50 kg",
+        quality: "High",
+        stars: 4,
+        image: "./tomatoes.jpeg"
+      },
+      {
+        name: "Modern Hoe",
+        amount: "20 pcs",
+        quality: "Medium",
+        stars: 5,
+        image: "hoe.jpeg"
+      },
+      {
+        name: "Irrigation Pump",
+        amount: "10 units",
+        quality: "High",
+        stars: 5,
+        image: "./pump.jpeg"
+      }
+    ];
+
+    const productGrid = document.getElementById("productGrid");
+
+    sampleProducts.forEach(product => {
+      const productDiv = document.createElement("div");
+      productDiv.classList.add("product");
+      productDiv.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <h3>${product.name}</h3>
+        <p><strong>Amount:</strong> ${product.amount}</p>
+        <p><strong>Quality:</strong> ${product.quality}</p>
+        <p class="stars">${"★".repeat(product.stars)}${"☆".repeat(5 - product.stars)}</p>
+        <button onclick="alert('You want to buy ${product.name}')">Buy Now</button>
+      `;
+      productGrid.appendChild(productDiv);
+    });
+  </script>
+</body>
+</html>

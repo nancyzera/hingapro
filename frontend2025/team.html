@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Team | Hinga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4fff5;
+      color: #013a1a;
+    }
+
+    header {
+      background-color: #228B22;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+    }
+
+    .back-home {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      background-color: #034d1a;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .back-home:hover {
+      background-color: #04662e;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #04754c;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .member-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 128, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .member-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .member-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .member-card h3 {
+      margin-bottom: 8px;
+      color: #034d1a;
+    }
+
+    .role {
+      font-weight: 500;
+      color: #555;
+    }
+
+    footer {
+      background-color: #013a1a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    
+    header {
+      background-color: rgba(6,33,6, 0.9); 
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #ffe600;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background-color: seagreen;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 100;
+      width: 250px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 5px 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #2eaa2e;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .see{
+      text-align: center;
+      display: flex;
+    margin-right: 45px;
+    padding-right: 50px;
+    gap: 30px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="./hinga logo.png.png" alt="Hinga Logo" style="border-radius: 20px" />
+      <span style="color: #ffe600;">HINGA☘</span>
+    </div>
+    <nav>
+      <div class="see">
+      <a href="./index.html">Home</a>
+      <div class="dropdown">
+        <a href="#">About Us</a>
+        <div class="dropdown-content">
+          <hr><a href="./mission.html">Our Mission</a>
+          <hr><a href="./vision.html">Our Vision</a>
+        <hr><a href="./team.html">Team</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Service</a>
+        <div class="dropdown-content">
+          <hr><a href="./real.html">Real-time Weather</a>
+          <hr><a href="./sell.html">Buy&Sell</a>
+          <hr><a href="./train.html">Training</a>
+          <hr><a href="./tools.html">Tools</a>
+       <hr><a href="./guide.html">Guideline</a><hr>
+        </div>
+      </div>
+      <a href="./coca.html"> Contact</a>
+    </div>
+      <a href="./login.html"><i class="fas fa-user"></i> Log In</a>
+    </nav>
+  </header>
+
+
+<main>
+  <h2>Meet Our Team</h2>
+  <div class="team-grid">
+    <div class="member-card">
+      <img src="./4.jpg" alt="Kwizera Teta Nancy" />
+      <h3>Kwizera Teta Nancy</h3>
+      <p class="role">Frontend Developer</p>
+    </div>
+
+    <div class="member-card">
+      <img src="./3.jpg" alt="Kwizera Aime Loic" />
+      <h3>Kwizera Aime Loic</h3>
+      <p class="role">Backend Developer</p>
+    </div>
+
+    <div class="member-card">
+      <img src="./1.jpg" alt="Abatoni Ariella" />
+      <h3>Abatoni Ariella</h3>
+      <p class="role">UI/UX Designer</p>
+    </div>
+
+    <div class="member-card">
+      <img src="./2.jpg" alt="Nyarwaya Kenny" />
+      <h3>Nyarwaya Kenny</h3>
+      <p class="role">UI/UX Designer</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Hinga Agritech | Built by Our Passionate Team</p>
+</footer>
+
+</body>
+</html>
